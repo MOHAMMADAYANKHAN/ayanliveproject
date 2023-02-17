@@ -15,4 +15,5 @@ ConnectDB()
 app.listen(port,()=>{
     console.log(`port is colled${port}`);
 })
+console.log("hello  ayan live project");
 console.log(process.env.MONGO_URL);
