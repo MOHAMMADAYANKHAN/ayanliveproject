@@ -40,7 +40,10 @@ const loginserver=asyncHandler(async (req,res)=>{
     res.status(200).json(result)
     }
 })
-
+// const search = asyncHandler(async(req,res)=>{
+//  let data = await user.find(req.params_id)
+//  res.status(200).json(data)
+// })
 // const setUsers = asyncHandler(async (req, res) => {
 
 //     const { name, email, password } = req.body;
@@ -106,6 +109,7 @@ module.exports={
     setUsers,
     updateuser,
     deleteuser,
-    loginserver
+    loginserver,
+    
 
 }

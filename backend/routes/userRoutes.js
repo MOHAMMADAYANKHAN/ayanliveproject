@@ -10,6 +10,7 @@ Router.post('/',setUsers)
 Router.put('/:_id',updateuser)
 Router.delete('/:_id',deleteuser)
 Router.post("/login",loginserver)
+// Router.get("/search/:_id",search)
 // routes.use(express.json())
 
 // Router.route('/').get(getuser).post(setUsers)
