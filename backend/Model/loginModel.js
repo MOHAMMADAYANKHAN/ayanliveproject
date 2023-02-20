@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
-
-    email: String,
-    password: Number,
+    email: {
+        type:String,
+        required:[true,'Please add email']
+       },
+       password: {
+        type:Number,
+        required:[true,'Please add a password']
+       },
 });
 
 module.exports = mongoose.model('Login',studentSchema);
