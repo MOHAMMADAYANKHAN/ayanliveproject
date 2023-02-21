@@ -15,11 +15,11 @@ const getproduct= async(req,res)=>{
 
 const addproduct= asyncHandler(async(req,res)=>{
 
-    const { title , dis,price,quentity} = req.body
-if(!title && !dis && !price && !quentity){
+    const { title , dis,price,quentity,Image} = req.body
+if(!title && !dis && !price && !quentity && !Image){
     res.status(400).json({message:"Please add all Filed"})
 }
-    let data= await product.create({title:req.body.title ,dis:req.body.dis,price:req.body.price,quentity:req.body.quentity})
+    let data = await product.create({title:req.body.title ,dis:req.body.dis,price:req.body.price,quentity:req.body.quentity,Image:req.body.Image})
     console.log("====>",data);
     res.status(200).json(data)
 })

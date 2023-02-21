@@ -4,7 +4,7 @@ router.use(express.json());
 const  { registeruser, loginuser,getMe} = require('../controllers/userAuthControllers')
 router.post('/',registeruser);
 router.post('/login',loginuser)
-router.get('/me/:key',getMe)
+router.get('/me/:name',getMe)
 
 
 

@@ -13,9 +13,10 @@ const studentSchema = new mongoose.Schema({
     required:[true,'Please add a price']
    },
    quentity: {
-    type:Number,
+    type:String,
     required:[true,'Please add a quentity']
    },
+   Image: String,
    
 },{
     timestamps:true
