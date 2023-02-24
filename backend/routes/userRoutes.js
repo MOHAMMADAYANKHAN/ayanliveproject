@@ -1,15 +1,16 @@
 const express = require('express');
 const Router = express.Router();
+const {protect} = require("../middleware/authMiddleware");
 
 Router.use(express.json())
 
 
     const {getuser,setUsers,updateuser,deleteuser,loginserver}=require('../controllers/usercontrollers')
-Router.get('/',getuser)
-Router.post('/',setUsers)
-Router.put('/:_id',updateuser)
-Router.delete('/:_id',deleteuser)
-Router.post("/login",loginserver)
+Router.get('/',protect,getuser)
+Router.post('/',protect,setUsers)
+Router.put('/:_id',protect,updateuser)
+Router.delete('/:_id',protect,deleteuser)
+Router.post("/login",protect,loginserver)
 // Router.get("/search/:_id",search)
 // routes.use(express.json())
 
